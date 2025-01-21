@@ -1,0 +1,22 @@
+{
+  "name": "sasi-converter",
+  "version": "1.0.0",
+  "description": "For Learning CI",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kusujanakiram/sasi-converter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kusujanakiram/sasi-converter/issues"
+  },
+  "homepage": "https://github.com/kusujanakiram/sasi-converter#readme",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
