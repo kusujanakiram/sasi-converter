@@ -4,7 +4,7 @@
   "description": "For Learning CI",
   "main": "index.js",
   "scripts": {
-    "run" : "node index.js",
+    "start" : "node index.js",
     "test": "jest"
   },
   "repository": {
