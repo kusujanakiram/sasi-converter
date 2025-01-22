@@ -7,7 +7,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -15,10 +14,29 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 18 # Use the Node.js version of your choice
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
 
       - name: Run Jest tests
         run: npm test
+
+  docker:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Log in to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.Docker_ID }}
+          password: ${{ secrets.kusujanakiram }}
+
+      - name: Build and push Docker image
+        run: |
+          docker build -t kusujanakiram/sasi-converter:latest .
+          docker push kusujanakiram/sasi-converter:latest
+
