@@ -1,4 +1,4 @@
-# Use the official Node.js image with version 18
+# Use the official Node.js image with version18
 FROM node:18-alpine
 
 # Set the working directory inside the container
